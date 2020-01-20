@@ -1,0 +1,21 @@
+<h1>T´ES SUR LE SITE DE TIM BATARD!</h1>
+<br>
+<br>
+<br>
+<h4>La liste des recettes dans mon cookbook:</h4>
+
+<% recipes = @cookbook.all %>
+<ol>
+  <% recipes.each_with_index do |recipe, index| %>
+  <% recipe.done == "true" ? check = "[X]" : check = "[..]" %>
+    <li>
+      <%="#{check} #{recipe.name} (#{recipe.prep_time} - #{recipe.difficulty})" %>
+      <a href="/dest/<%=index%>">DESTROY!</a>
+      </li>
+
+  <% end %>
+</ol>
+
+<br>
+<br>
+<a href="/new">Add a new recipe!</a>
