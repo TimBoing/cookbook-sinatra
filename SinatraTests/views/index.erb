@@ -1,0 +1,10 @@
+<p><%= @a_array.length %></p>
+
+<ul>
+  <% @a_array.each do |a| %>
+  <li> <%= "#{a[:title]} ----------- #{a[:ref]} "%></li>
+  <li> <%= "----------------------" %></li>
+  <li> <%= " CHILDREN : #{a[:children]} "%></li>
+  <li> <%= "----------------------" %></li>
+  <% end  %>
+</ul>
